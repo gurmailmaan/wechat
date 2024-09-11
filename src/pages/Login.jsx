@@ -5,7 +5,7 @@ import React from 'react';
     <div className='formContainer'>
         <div className='formWrapper'>
             <span className='logo'>WECHAT</span>
-            <span className='title'>Register</span>
+            <span className='title'>Sign In</span>
             <form>
                 
                 <input type="email" placeholder='Email'/>
