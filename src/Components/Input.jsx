@@ -73,6 +73,13 @@ const Input = () => {
     setText("");
     setImg(null);
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSend();
+    }
+  };
+
   return (
     <div className="input">
       <input
@@ -80,9 +87,9 @@ const Input = () => {
         placeholder="Type something..."
         onChange={(e) => setText(e.target.value)}
         value={text}
+        onKeyDown={handleKeyDown} // Add this line to handle "Enter" key press
       />
       <div className="send">
-        <img src={Attach} alt="" />
         <input
           type="file"
           style={{ display: "none" }}

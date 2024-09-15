@@ -1,38 +1,32 @@
-
-
-body{
+body {
     background: url("./img/wechatbg3.jpg") no-repeat center/cover;
     height: 100vh;
 
-    @mixin mobile{
-        @media screen and (max-width:480px){
+    @mixin mobile {
+        @media screen and (max-width: 480px) {
             @content;
-
         }
     }
 
     @mixin tablet {
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
             @content;
         }
     }
 
-    @mixin laptop{
-        @media screen and (max-width:1200px){
+    @mixin laptop {
+        @media screen and (max-width: 1200px) {
             @content;
         }
     }
-    
-    
-    .formContainer{
-    
+
+    .formContainer {
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .formWrapper{
-
+        .formWrapper {
             background-color: white;
             padding: 20px 60px;
             border-radius: 10px;
@@ -40,85 +34,95 @@ body{
             flex-direction: column;
             gap: 10px;
             align-items: center;
-            .logo{
+
+            .logo {
                 color: #000;
                 font-weight: bold;
                 font-size: 24px;
             }
 
-            .title{
+            .title {
                 color: #000;
                 font-size: 18px;
             }
-            form{
+
+            form {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
 
-                input{
+                input {
                     padding: 15px;
                     border: none;
                     width: 250px;
                     border-bottom: 1.5px solid #000;
-                    &::placeholder{
-                        color:rgb(175,175,175)
+                    &::placeholder {
+                        color: rgb(175, 175, 175);
                     }
                 }
-                label{
+
+                label {
                     display: flex;
                     align-items: center;
                     cursor: pointer;
                     gap: 10px;
                     font-size: 12px;
-                    img{
-                    width: 35px;
-                    height: 35px;
+                    img {
+                        width: 35px;
+                        height: 35px;
                     }
-
                 }
-            button{
-                background-color: #000;
-                color: white;
-                border: none;
-                padding: 10px;
-                font-weight: bold;
-                cursor: pointer;
-                border-radius: 5px;
+
+                button {
+                    background-color: #000;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                
+                .error {
+                    color: #777777;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    text-align: center;
+                }
             }
-            
-            }
-            p{
-            color: #000; 
-            font-size: 12px;
-            margin-top: 10px;
+
+            p {
+                color: #000;
+                font-size: 12px;
+                margin-top: 10px;
             }
         }
     }
 
-    .home{
+    .home {
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
-    .container{
+    .container {
         border: 1px solid white;
         border-radius: 10px;
         width: 65%;
         height: 80%;
         display: flex;
         overflow: hidden;
-        @include tablet{
+        @include tablet {
             width: 90%;
         }
 
-        .sidebar{
+        .sidebar {
             flex: 1;
             background-color: #777777;
-            
-            .navbar{
+
+            .navbar {
                 display: flex;
                 align-items: center;
                 background-color: #333333;
@@ -127,18 +131,18 @@ body{
                 justify-content: space-between;
                 color: white;
 
-                .logo{
+                .logo {
                     font-weight: bold;
-                    @include tablet{
+                    @include tablet {
                         display: none;
                     }
                 }
 
-                .user{
+                .user {
                     display: flex;
                     gap: 10px;
 
-                    img{
+                    img {
                         background-color: #000;
                         height: 24px;
                         width: 24px;
@@ -146,7 +150,7 @@ body{
                         object-fit: cover;
                     }
 
-                    button{
+                    button {
                         background-color: #000;
                         color: white;
                         border: none;
@@ -154,29 +158,27 @@ body{
                         cursor: pointer;
                     }
                 }
-
-              
             }
 
-            .search{
+            .search {
                 border-bottom: 1px solid gray;
 
-                .searchform{
+                .searchform {
                     padding: 10px;
-                    input{
+                    input {
                         background-color: transparent;
                         border: none;
                         color: white;
                         outline: none;
 
-                        &::placeholder{
+                        &::placeholder {
                             color: rgb(173, 171, 171);
                         }
                     }
                 }
             }
 
-            .userChat{
+            .userChat {
                 padding: 10px;
                 display: flex;
                 align-items: center;
@@ -184,32 +186,35 @@ body{
                 color: white;
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     background-color: #333333;
                 }
-                img{
+
+                img {
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
                     object-fit: cover;
                 }
-                .userChatInfo{
 
-                    span{
+                .userChatInfo {
+                    span {
                         font-size: 16px;
                         font-weight: 500;
                     }
-                    p{
+
+                    p {
                         font-size: 12px;
                         color: rgb(184, 184, 184);
                     }
                 }
             }
         }
-        .chatdisplay{
+
+        .chatdisplay {
             flex: 2;
 
-            .chatInfo{
+            .chatInfo {
                 height: 50px;
                 background-color: #666666;
                 display: flex;
@@ -219,72 +224,75 @@ body{
                 color: white;
             }
 
-            .chatIcons{
+            .chatIcons {
                 display: flex;
                 gap: 10px;
 
-                img{
+                img {
                     height: 24px;
                     cursor: pointer;
                 }
             }
 
-            .messages{
+            .messages {
                 background-color: #cfcfcf;
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
                 overflow-x: hidden;
 
-                .message{
+                .message {
                     display: flex;
                     gap: 20px;
                     margin-bottom: 20px;
 
-                    .messageInfo{
+                    .messageInfo {
                         display: flex;
                         flex-direction: column;
                         font-weight: 300;
                         color: #777777;
-                        img{
+                        img {
                             width: 40px;
                             height: 40px;
                             border-radius: 50%;
                             object-fit: cover;
                         }
                     }
-                    .messageContent{
+
+                    .messageContent {
                         max-width: 80%;
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
 
-                        p{
+                        p {
                             background-color: white;
                             padding: 10px;
-                        border-radius: 0px 10px 10px;
+                            border-radius: 0px 10px 10px;
                         }
-                        img{
+
+                        img {
                             width: 50%;
                         }
                     }
 
-                    &.owner{
+                    &.owner {
                         flex-direction: row-reverse;
 
-                        .messageContent{
+                        .messageContent {
                             align-items: flex-end;
-                            p{
+                            p {
                                 background-color: #666666;
                                 color: white;
-                                border-radius: 10px 0px 10px 10px;max-width: max-content;
+                                border-radius: 10px 0px 10px 10px;
+                                max-width: max-content;
                             }
                         }
                     }
                 }
             }
 
-            .input{
+            .input {
                 height: 50px;
                 background-color: white;
                 padding: 10px;
@@ -292,29 +300,29 @@ body{
                 align-items: center;
                 justify-content: space-between;
 
-                input{
+                input {
                     width: 100%;
                     border: none;
                     outline: none;
                     color: #000;
                     font-size: 16px;
 
-                    &::placeholder{
+                    &::placeholder {
                         color: #666666;
                     }
                 }
 
-                .send{
+                .send {
                     display: flex;
                     align-items: center;
                     gap: 10px;
 
-                    img{
+                    img {
                         height: 24px;
-                        cursor: pointer ;
+                        cursor: pointer;
                     }
 
-                    button{
+                    button {
                         border: none;
                         padding: 10px 15px;
                         color: white;
@@ -325,5 +333,4 @@ body{
             }
         }
     }
-
 }

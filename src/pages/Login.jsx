@@ -31,7 +31,7 @@ import { auth } from '../firebase';
                 <input type="email" placeholder='Email'/>
                 <input type="password" placeholder='Password'/> 
                 <button>Sign in</button>
-                {err && <span>Something Went Wrong</span>}
+                {err && <span className='error'>Incorrect Email or Password</span>}
             </form>
             <p>You don't have an account? <Link to="/register">Register</Link></p>
         </div>    
